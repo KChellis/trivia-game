@@ -12,6 +12,10 @@ describe ("API", function() {
       expect(api.correct).toBeDefined();
       expect(api.options).toBeDefined();
     }, 3000);
-
+  });
+  it("should determine if correct answer was chosen", function() {
+    api.correct = "Oregon";
+    let result = api.checkAnswer("Oregon");
+    expect(result).toEqual(true)
   });
 });
