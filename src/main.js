@@ -15,7 +15,7 @@ $(function() {
   $("#nameForm").submit(function(event) {
     event.preventDefault();
     $("#nameForm").hide();
-    $("#score").prepend("Score: ")
+    $("#score").prepend("Score: ");
     $(".score").text("0");
     $(".result").show();
     let name = $("#name").val();
@@ -47,7 +47,7 @@ $(function() {
 
   $(".option").click(function() {
     let choice = $(this).val();
-    let answer = api.setAnswer(choice)
+    let answer = api.setAnswer(choice);
 
     $(".result").show();
     $(".question-container").hide().removeClass("box-shadow");

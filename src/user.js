@@ -7,11 +7,11 @@ class User {
   }
   checkLevel() {
     if(this.level > 14) {
-      this.difficulty = "hard"
+      this.difficulty = "hard";
     } else if (this.level > 4) {
-      this.difficulty = "medium"
+      this.difficulty = "medium";
     }else {
-      this.difficulty = "easy"
+      this.difficulty = "easy";
     }
   }
   addScore() {
