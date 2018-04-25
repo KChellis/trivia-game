@@ -7,7 +7,7 @@ class API {
     this.options;
   }
   makeCall() {
-    let promise - new Promise (function(resolve, reject) {
+    let promise = new Promise ((resolve, reject) => {
       let request = new XMLHttpRequest();
       let url = `https://opentdb.com/api.php?amount=1&category=${this.category}&difficulty=${this.level}&type=multiple`;
       request.onload = function() {
@@ -21,11 +21,12 @@ class API {
       request.send();
     });
 
-    promise.then(function(response) {
-      body = JSON.parse(response);
-      this.question = body.results.question;
-      this.correct = body.results.correct_answer;
-      this.options = body.results.incorrect_answers;
+    promise.then((response) => {
+      let body = JSON.parse(response);
+      this.question = body.results[0].question;
+      this.correct = body.results[0].correct_answer;
+      this.options = body.results[0].incorrect_answers;
     });
   }
 }
+export { API };
