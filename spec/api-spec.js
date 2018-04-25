@@ -18,4 +18,9 @@ describe ("API", function() {
     let result = api.checkAnswer("Oregon");
     expect(result).toEqual(true)
   });
+  it("should determine if incorrect answer was chosen", function() {
+    api.correct = "Oregon";
+    let result = api.checkAnswer("Montana");
+    expect(result).not.toEqual(true)
+  });
 });
