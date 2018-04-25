@@ -6,7 +6,41 @@
   </head>
   <body>
     <div class="container">
+      <h1 class="text-center">Super Ultra Trivia Time</h1>
+      <form id="nameForm" class="form-group">
+        <input type="text" id="name" class="form-control mb-3" placeholder="Enter your name:">
+        <select class="form-control" id="category">
+          <option value="9">General Knowledge</option>
+          <option value="11">Entertainment: Film</option>
+          <option value="12">Entertainment: Music</option>
+          <option value="15">Entertainment: Video Games</option>
+          <option value="17">Science/Nature</option>
+          <option value="21">Sports</option>
+          <option value="23">History</option>
+        </select>
+        <button type="submit" class="btn btn-info mt-3">Submit</button>
+      </form>
+      <div class="user-info">
+        <h3 class="user"></h3>
+        <h3 id="score"><span class="score"></span></h3>
+      </div>
 
+      <div class="question-container">
+        <h3 id="question"></h3>
+        <button type="button" class="btn option" value="A" ><span id="optionA"></span></button>
+        <button type="button" class="btn option" value="B" ><span id="optionB"></span></button>
+        <button type="button" class="btn option" value="C" ><span id="optionC"></span></button>
+        <button type="button" class="btn option" value="D" ><span id="optionD"></span></button>
+      </div>
+      <div class="result">
+        <div class="correct">
+          <h3>That is the correct answer.</h3>
+        </div>
+        <div class="incorrect">
+          <h3>Sorry that is not the correct answer!</h3>
+        </div>
+        <button id="next" type="button" class="btn btn-info">Start</button>
+      </div>
     </div>
   </body>
 </html>

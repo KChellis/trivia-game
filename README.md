@@ -12,6 +12,7 @@ _A page where a user can choose a trivia category and play a trivia game with in
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
 | **Program will display name and score** | User input: "Kristen"  | Output: Kristen's score: 0  |
+| **Program will determine question difficulty** | User input: "level 3"  | Output: difficulty = "easy"  |
 | **Program will display trivia questions** | User input: "General knowledge"  | Output: What is the largest (area) state? A: Texas B: Alaska C: Montana D: California |
 | **Program will set timer for question** | User input: "General knowledge"  | Output: Timer: 30s |
 | **Program will determine if answer is correct** | User input: "Alaska"  | Output: That is correct! plus 50pts |
