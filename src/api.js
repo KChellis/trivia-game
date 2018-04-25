@@ -28,5 +28,12 @@ class API {
       this.options = body.results[0].incorrect_answers;
     });
   }
+  checkAnswer(answer) {
+    if (answer === this.correct) {
+      return true;
+    }else {
+      return false;
+    }
+  }
 }
 export { API };
