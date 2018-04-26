@@ -8,6 +8,7 @@ class API {
     this.question;
     this.correct;
     this.options;
+    this.time = 10;
   }
   callCount() {
     return new Promise ((resolve, reject) => {
@@ -37,7 +38,6 @@ class API {
       }
 
       let url = `https://opentdb.com/api.php?amount=${count-1}&category=${this.category}&difficulty=${difficulty}&type=multiple`;
-      console.log(url);
       request.onload = function() {
         if (this.status === 200) {
           resolve(request.response);
@@ -112,7 +112,6 @@ class API {
     }
   }
   shuffleArray() {
-    console.log(this.options);
     for (var i = 3; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
       var temp = this.options[i];

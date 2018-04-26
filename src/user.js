@@ -28,14 +28,5 @@ class User {
     }
   }
 
-  removeScore() {
-    if(this.difficulty === "easy"){
-      this.score -= 50;
-    }else if (this.difficulty === "medium") {
-      this.score -= 100;
-    }else if (this.difficulty === "hard") {
-      this.score -= 200;
-    }
-  }
 }
 export { User };

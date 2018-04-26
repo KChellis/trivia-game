@@ -35,7 +35,7 @@ form {
   justify-content: space-between;
   align-items: center;
 }
-.question-container, .result, .correct, .incorrect, .loss {
+.question-container, .result, .correct, .incorrect, .loss, .timeUp {
   display: none;
 }
 .result {
