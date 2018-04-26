@@ -6,7 +6,14 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="text-center">Super Ultra Trivia Time</h1>
+      <div class="top-header mb-4">
+        <div class="user-info">
+          <h3 class="user"></h3>
+          <h3 id="score"><span class="score"></span></h3>
+          <h3 id="timer"><span class="timer"></span></h3>
+        </div>
+      </div>
+      <h1 class="text-center" id="gameTitle">Super Ultra Trivia Time</h1>
       <form id="nameForm" class="form-group">
         <input type="text" id="name" class="form-control mb-3" placeholder="Enter your name:">
         <select class="form-control" id="category">
@@ -17,20 +24,14 @@
           <option value="17">Science/Nature</option>
           <option value="23">History</option>
         </select>
-        <button type="submit" class="btn btn-info mt-3">Submit</button>
+        <button type="submit" class="btn mt-3 styled-btn">Submit</button>
       </form>
-      <div class="user-info">
-        <h3 class="user"></h3>
-        <h3 id="score"><span class="score"></span></h3>
-        <h3 id="timer"><span class="timer"></span></h3>
-      </div>
-
       <div class="question-container">
         <h3 id="question"></h3>
-        <button type="button" class="btn option" value="A" ><span id="optionA"></span></button>
-        <button type="button" class="btn option" value="B" ><span id="optionB"></span></button>
-        <button type="button" class="btn option" value="C" ><span id="optionC"></span></button>
-        <button type="button" class="btn option" value="D" ><span id="optionD"></span></button>
+        <button type="button" class="btn option" value="A" ><div id="optionA"></div></button>
+        <button type="button" class="btn option" value="B" ><div id="optionB"></div></button>
+        <button type="button" class="btn option" value="C" ><div id="optionC"></div></button>
+        <button type="button" class="btn option" value="D" ><div id="optionD"></div></button>
       </div>
       <div class="result">
         <div class="correct">
@@ -42,11 +43,11 @@
         <div class="timeUp">
           <h3>Sorry, you have run out of time!</h3>
         </div>
-        <button id="next" type="button" class="btn btn-info">Start</button>
+        <button id="next" type="button" class="btn styled-btn">Start</button>
       </div>
-      <div class="loss">
-        <h3>You have answered too many questions wrong. Your game is over!</h3>
-        <button id="reload" type="button" class="btn btn-info">Try Again!</button>
+      <div class="loss text-center">
+        <h3>You have answered too many questions wrong. <br> Your game is over!</h3>
+        <button id="reload" type="button" class="btn styled-btn">Try Again!</button>
       </div>
     </div>
   </body>

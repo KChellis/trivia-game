@@ -20,6 +20,7 @@ $(function() {
     $("#timer").prepend("Time: ");
     $(".timer").text(30);
     $(".result").show();
+    $("#gameTitle").hide();
     let name = $("#name").val();
     category = parseInt($("#category").val());
     user = new User(name);
@@ -30,6 +31,7 @@ $(function() {
     }, 5000);
     setTimeout(() => {
       api.callQuestions("hard");
+      console.log(api);
     }, 10000);
     $(".user").text(name);
   });
@@ -40,7 +42,7 @@ $(function() {
     $(".incorrect").hide();
     $(".timeUp").hide();
     $("#next").text("Next Question");
-    api.time = 10;
+    api.time = 30;
     $(".timer").text(api.time);
     user.checkLevel();
     api.getQuestion(user.difficulty);

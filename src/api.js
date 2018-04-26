@@ -8,7 +8,7 @@ class API {
     this.question;
     this.correct;
     this.options;
-    this.time = 10;
+    this.time = 30;
   }
   callCount() {
     return new Promise ((resolve, reject) => {
@@ -67,19 +67,19 @@ class API {
         let medium = body.category_question_count.total_medium_question_count
         let hard =body.category_question_count.total_hard_question_count
         if(easy <= 50) {
-          this.count.push(easy);
+          this.count.push(36);
         }else {
-          this.count.push(50);
+          this.count.push(36);
         }
         if(medium <= 50) {
-          this.count.push(medium);
+          this.count.push(medium-7);
         }else {
           this.count.push(50);
         }
         if(hard <= 50) {
           this.count.push(hard-7);
         }else {
-          this.count.push(50);
+          this.count.push(46);
         }
         return this.callQuestions(difficulty);
       });
