@@ -95,7 +95,6 @@ class API {
     }else if (difficulty === "easy") {
       array = this.resultsEasy.results;
     }
-    console.log(array);
     let max = array.length - 1;
     let index = Math.floor(Math.random() * (max + 1));
     this.question = array[index].question;

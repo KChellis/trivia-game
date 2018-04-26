@@ -69,6 +69,19 @@ $(function() {
       $(".correct").hide();
       $(".incorrect").show();
       user.level--;
+      user.removeScore();
+      user.wrong++;
     }
+    setTimeout(() => {
+      if (user.wrong === 10) {
+        $(".loss").show();
+        $(".result").hide();
+      }
+    }, 500);
   });
+
+  $("#reload").click(function() {
+    location.reload();
+  });
+
 });
