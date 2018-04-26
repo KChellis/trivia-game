@@ -6,6 +6,9 @@ class User {
     this.difficulty;
   }
   checkLevel() {
+    if(this.level < 0) {
+      this.level = 0;
+    }
     if(this.level > 14) {
       this.difficulty = "hard";
     } else if (this.level > 4) {
